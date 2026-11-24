@@ -1,0 +1,124 @@
+:root {
+  --fond: #f7f6f2;
+  --carte: #ffffff;
+  --accent: #3f7d46;
+  --accent-fonce: #2c5a33;
+  --texte: #2b2b26;
+  --texte-doux: #6b6b60;
+  --bord: #e2e0d6;
+  --attention-fond: #fdf0ef;
+  --attention-bord: #d98a84;
+  --recette-fond: #fdf8ec;
+  --recette-bord: #d9b25f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.55;
+}
+header {
+  background: linear-gradient(135deg, #2c5a33, #3f7d46);
+  color: #ffffff;
+  text-align: center;
+  padding: 28px 16px 20px;
+}
+header h1 { margin: 0 0 6px; font-size: 1.9rem; }
+header p { margin: 0; opacity: 0.92; font-size: 1rem; }
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+#champ-recherche, #filtre-domaine {
+  padding: 11px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--bord);
+  border-radius: 8px;
+  background: var(--carte);
+  color: var(--texte);
+  width: 100%;
+}
+#champ-recherche:focus, #filtre-domaine:focus { outline: 2px solid var(--accent); }
+#info { text-align: center; color: var(--texte-doux); font-size: 0.92rem; margin: 0 0 10px; }
+#liste-fiches { max-width: 820px; margin: 0 auto 30px; padding: 0 16px; }
+.fiche {
+  background: var(--carte);
+  border: 1px solid var(--bord);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.fiche summary {
+  cursor: pointer;
+  padding: 13px 16px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.fiche summary:hover { background: #f2f6f0; }
+.badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.badge-aromatique { background: #5a8f56; }
+.badge-médicinale { background: #7d5ba6; }
+.badge-deux { background: #2c5a33; }
+.latin {
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.84rem;
+  font-style: italic;
+  color: var(--texte-doux);
+}
+.corps { padding: 4px 18px 16px; border-top: 1px solid var(--bord); }
+.corps h3 { font-size: 1rem; color: var(--accent-fonce); margin: 16px 0 6px; }
+.corps h3:first-child { margin-top: 10px; }
+.resume { margin: 12px 0 4px; }
+.corps ul { margin: 6px 0; padding-left: 22px; }
+.corps li { margin: 3px 0; }
+.attention {
+  background: var(--attention-fond);
+  border-left: 4px solid var(--attention-bord);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 0.94rem;
+}
+.recette {
+  background: var(--recette-fond);
+  border: 1px solid var(--recette-bord);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 12px 0;
+  font-size: 0.94rem;
+}
+.recette strong { color: #8a6d1f; }
+.recette p { margin: 6px 0 0; }
+footer {
+  text-align: center;
+  color: var(--texte-doux);
+  font-size: 0.85rem;
+  padding: 18px 16px 26px;
+  border-top: 1px solid var(--bord);
+  background: var(--carte);
+}
+footer .medicale { max-width: 720px; margin: 8px auto 0; font-size: 0.8rem; }
+@media (max-width: 560px) {
+  header h1 { font-size: 1.5rem; }
+  .fiche summary { font-size: 0.98rem; }
+  .corps { padding: 4px 13px 14px; }
+}

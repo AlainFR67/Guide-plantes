@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide-plantes — 100 herbes médicinales et aromatiques</title>
+  <meta name="description" content="Guide pratique des 100 herbes médicinales et aromatiques les plus courantes : vertus, points d’attention, récolte, utilisation et recettes.">
+  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+</head>
+<body>
+  <header>
+    <h1>🌿 Guide-plantes</h1>
+    <p class="sous-titre">Les 100 herbes médicinales et aromatiques les plus courantes — vertus, précautions, récolte et recettes</p>
+  </header>
+
+  <nav class="barre-recherche">
+    <div class="ligne-recherche">
+      <input type="search" id="champ-recherche" placeholder="Rechercher : nom, vertu, symptôme, partie utilisée…" autocomplete="off">
+      <select id="filtre-domaine" aria-label="Filtrer par usage">
+        <option value="">Tous les usages</option>
+        <option value="digestion">Digestion</option>
+        <option value="sommeil">Sommeil, détente</option>
+        <option value="respiration">Respiration</option>
+        <option value="peau">Peau, plaies</option>
+        <option value="urinaire">Voies urinaires</option>
+        <option value="circulation">Circulation, cœur</option>
+        <option value="defenses">Défenses naturelles</option>
+        <option value="douleur">Antidouleur, antispasmodique</option>
+        <option value="feminin">Bien-être féminin</option>
+      </select>
+    </div>
+    <p class="stats" id="stats"></p>
+  </nav>
+
+  <main>
+    <p class="resultat-info" id="info"></p>
+    <div id="liste-fiches"></div>
+  </main>
+
+  <footer>
+    <p id="app-version"></p>
+    <p class="credits">Application suggérée par Alain et créée par son ami Vibe Code</p>
+    <p class="note-source">Informations culturelles et culinaires à visée pédagogique : elles ne remplacent en aucun cas l’avis d’un médecin ou d’un pharmacien.</p>
+  </footer>
+
+  <script src="js/data.js?v=1.0.0"></script>
+  <script src="js/app.js?v=1.0.0"></script>
+</body>
+</html>
